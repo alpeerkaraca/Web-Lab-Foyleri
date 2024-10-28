@@ -1,0 +1,31 @@
+<students>
+    
+    <student>
+        <name>Alper Karaca</name>
+        <number>11111111</number>
+        <year>2</year>
+        <major> Bilgisayar Mühendisliği</major>
+    </student>
+
+    <student>
+        <name>Ali Veli</name>
+        <number>22222222</number>
+        <year>3</year>
+        <major> Elektrik Elektronik Mühendisliği</major>
+    </student>
+
+    <student>
+        <name>Doğukan Ceylan</name>
+        <number>33333333</number>
+        <year>4</year>
+        <major> İnşaat Mühendisliği</major>
+    </student>
+
+    <student>
+        <name>Hüseyin Aşan</name>
+        <number>44444444</number>
+        <year>4</year>
+        <major> Endüstri Mühendisliği</major>
+    </student>
+
+</students>

@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Araç Kiralama</title>
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="css/rent-a-car.css" />
+    <script
+      src="https://kit.fontawesome.com/051670c56f.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <!-- navbar -->
+
+    <div class="d-md-flex justify-content-md-center navbar-container">
+      <nav class="navbar navbar-expand-lg navbar-expand-sm">
+        <div class="container-fluid">
+          <div class="d-sm-flex justify-content-sm-center">
+            <a class="navbar-brand" href="#main">
+              <img src="assets/logo.png" class="" id="site-logo"
+            /></a>
+            <button
+              class="navbar-toggler"
+              type="button"
+              data-bs-toggle="collapse"
+              data-bs-target="#navbarSupportedContent"
+              aria-controls="navbarSupportedContent"
+              aria-expanded="false"
+              aria-label="Toggle navigation"
+              style="margin-left: 50%"
+            >
+              <span class="navbar-toggler-icon"></span>
+            </button>
+          </div>
+
+          <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0" id="navbar-ul">
+              <li class="nav-item">
+                <a class="nav-link active" aria-current="page" href="#"
+                  >Ana Sayfa</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#subeler">Şubelerimiz</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link active" href="#rent">Araç Kirala</a>
+              </li>
+              <li class="nav-item dropdown">
+                <a
+                  class="nav-link dropdown-toggle active"
+                  href="#"
+                  role="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  Hakkımızda
+                </a>
+                <ul class="dropdown-menu">
+                  <li><a class="dropdown-item" href="#sss">SSS</a></li>
+                  <li><a class="dropdown-item" href="#rent">Rezervasyon</a></li>
+                  <li><hr class="dropdown-divider" /></li>
+                  <li>
+                    <a class="dropdown-item" href="#filo">Araç Filomuz</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Rezervasyon  -->
+
+    <div class="container mt-5" id="rent">
+      <div class="row">
+        <form>
+          <div class="row">
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Adınız"
+                name="name"
+              />
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <input
+                type="text"
+                class="form-control"
+                placeholder="Soyadınız"
+                name="surname"
+              />
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <input
+                type="tel"
+                class="form-control"
+                placeholder="Telefon Numaranız"
+                name="tel"
+                maxlength="11"
+                inputmode="numeric"
+              />
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <label for="rent-date">Alış Tarihi</label>
+              <div class="input-group">
+                <input
+                  type="date"
+                  class="form-control"
+                  placeholder="Alış Tarihi"
+                  aria-describedby="addon-wrapping"
+                  id="rent-date"
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <label for="rent-date">Alış Saati</label>
+              <div class="input-group">
+                <input
+                  type="time"
+                  class="form-control"
+                  placeholder="Alış Saati"
+                  aria-describedby="addon-wrapping"
+                  id="rent-time"
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <label for="rent-date">Teslim Tarihi</label>
+              <div class="input-group">
+                <input
+                  type="date"
+                  class="form-control"
+                  placeholder="Alış Saati"
+                  aria-describedby="addon-wrapping"
+                  id="delivery-date"
+                />
+              </div>
+            </div>
+
+            <div class="col-sm-12 col-md-6 col-lg-3">
+              <label for="rent-date">Teslim Saati</label>
+              <div class="input-group">
+                <input
+                  type="time"
+                  class="form-control"
+                  placeholder="Alış Saati"
+                  aria-describedby="addon-wrapping"
+                  id="delivery-time"
+                />
+              </div>
+            </div>
+          </div>
+
+          <div class="row mt-3">
+            <div class="col-sm-12 col-md-6 col-lg-8">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Araç Seçiniz</option>
+                <option value="1">
+                  FIAT EGEA 1.3 MJET II DS 95 HP EASY ₺996 / g
+                </option>
+                <option value="2">
+                  RENAULT CLIO JOY 1.0 SCE 65 BG ₺939 / g
+                </option>
+                <option value="3">
+                  CITROEN C3 AIRCROSS 1.2 PURETECH 130HP EAT6 SHINE ₺1365 / g
+                </option>
+              </select>
+            </div>
+            <div class="col-sm-12 col-md-6 col-lg-4">
+              <select class="form-select" aria-label="Default select example">
+                <option selected>Şube Seçiniz</option>
+                <option value="1">Samsun / Atakent aCar Şube</option>
+                <option value="2">Samsun / İlkadım aCar Şube</option>
+                <option value="3">Samsun Havalimanı aCar Şube</option>
+              </select>
+            </div>
+          </div>
+          <div class="d-flex justify-content-center mt-3">
+            <button class="btn search-button" type="submit">
+              Rezervasyon Ara &nbsp;<i class="fas fa-search"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+
+    <!-- Şubeler -->
+
+    <div class="container mt-5" id="subeler">
+      <h2 class="text-center">Şubelerimiz</h2>
+      <div class="mt-5 row">
+        <div class="col-sm-12 col-md-4">
+          <div
+            class="sube-resim"
+            style="background-image: url(assets/atakum.jpg)"
+          >
+            <h3 class="text-center lead">Atakum Şubemiz</h3>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div
+            class="sube-resim"
+            style="background-image: url(assets/ilkadım.jpg)"
+          >
+            <h3 class="text-center lead">İlkadım Şubemiz</h3>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-4">
+          <div
+            class="sube-resim"
+            style="background-image: url(assets/havalimanı.jpg)"
+          >
+            <h3 class="text-center lead">Havalimanı Şubemiz</h3>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Araç Filosu  -->
+
+    <div class="container mt-5" id="filo">
+      <h2 class="text-center">Araç Filomuz</h2>
+      <div class="row mt-5">
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div class="card" style="width: 100%">
+            <img
+              src="assets/fiat-egea.png"
+              class="card-img-top img-fluid"
+              alt="fiat-egea"
+            />
+            <div class="card-body">
+              <h5 class="card-title">FIAT EGEA 1.3 MJET II DS 95 HP EASY</h5>
+              <p class="card-text">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                Suscipit ipsum in veniam, aspernatur odio minus.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fa-solid fa-gas-pump" style="margin-right: 1rem"></i
+                >Dizel
+              </li>
+              <li class="list-group-item">
+                <i class="fa-solid fa-gear" style="margin-right: 1rem"></i
+                >Manuel
+              </li>
+              <li class="list-group-item">
+                <i class="fa-solid fa-calendar" style="margin-right: 1rem"></i
+                >+21 Yaş
+              </li>
+            </ul>
+            <div class="card-body">
+              <p class="price">₺ 996</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div class="card" style="width: 100%">
+            <img
+              src="assets/renault-joy.png"
+              class="card-img-top img-fluid"
+              alt="renault-joy"
+            />
+            <div class="card-body">
+              <h5 class="card-title">RENAULT CLIO JOY 1.0 SCE 65 BG</h5>
+              <p class="card-text">
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Non
+                eligendi totam est maxime repellat aut.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fa-solid fa-gas-pump" style="margin-right: 0.8rem"></i
+                >Dizel
+              </li>
+
+              <li class="list-group-item">
+                <i class="fa-solid fa-gear" style="margin-right: 1rem"></i
+                >Manuel
+              </li>
+              <li class="list-group-item">
+                <i class="fa-solid fa-calendar" style="margin-right: 0.8rem"></i
+                >+21 Yaş
+              </li>
+            </ul>
+            <div class="card-body">
+              <p href="#" class="price">₺ 939</p>
+            </div>
+          </div>
+        </div>
+
+        <div class="col-sm-12 col-md-6 col-lg-4 mb-3">
+          <div class="card" style="width: 100%">
+            <img
+              src="assets/c3-aircross.png"
+              class="card-img-top img-fluid"
+              alt="c3-aircross"
+            />
+            <div class="card-body">
+              <h5 class="card-title">CITROEN C3 AIRCROSS 1.2 130HP</h5>
+              <p class="card-text">
+                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Enim
+                eligendi tenetur molestiae rerum voluptas unde.
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                <i class="fa-solid fa-gas-pump" style="margin-right: 1rem"></i
+                >Dizel
+              </li>
+
+              <li class="list-group-item">
+                <i class="fa-solid fa-gear" style="margin-right: 1rem"></i
+                >Otomatik
+              </li>
+              <li class="list-group-item">
+                <i class="fa-solid fa-calendar" style="margin-right: 0.8rem"></i
+                >+21 Yaş
+              </li>
+            </ul>
+            <div class="card-body">
+              <p class="price">₺ 1365</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- SSS -->
+
+    <div class="container mt-5" id="sss">
+      <h2 class="text-center">SSS</h2>
+      <div class="mt-5 row">
+        <!-- <div class="col-2"></div> -->
+        <div class="col-12">
+          <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseOne"
+                  aria-expanded="true"
+                  aria-controls="panelsStayOpen-collapseOne"
+                >
+                  Araç kiralarken hangi belgeleri getirmem gerekiyor?
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseOne"
+                class="accordion-collapse collapse show"
+              >
+                <div class="accordion-body">
+                  Araç kiralarken geçerli bir sürücü belgesi ve kimlik kartı ya
+                  da pasaport getirmeniz gerekmektedir. Ek olarak, kiralama
+                  ücretini ödeyeceğiniz bir kredi kartına da ihtiyacınız olacak.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseTwo"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseTwo"
+                >
+                  Araç kiralamak için yaş sınırı nedir?
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseTwo"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  Şirketimize göre en az 21 yaşında olmanız gerekmektedir.
+                  Ayrıca, 25 yaşın altındaki sürücülerden genç sürücü ücreti
+                  alınabilir. Belirli araç kategorileri için de minimum yaş
+                  sınırı değişiklik gösterebilir.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree"
+                >
+                  Araçta günlük kilometre sınırı var mı?
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseThree"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  Bazı araçlarımızda günlük kilometre sınırı bulunmaktadır.
+                  Kilometre sınırını aşmanız durumunda ek ücret alınabilir.
+                  Ancak sınırsız kilometre seçenekleri sunan araçlarımız da
+                  mevcuttur. Bu konuda kiralama yaparken detaylı bilgi
+                  alabilirsiniz.
+                </div>
+              </div>
+            </div>
+            <div class="accordion-item">
+              <h2 class="accordion-header">
+                <button
+                  class="accordion-button collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#panelsStayOpen-collapseThree"
+                  aria-expanded="false"
+                  aria-controls="panelsStayOpen-collapseThree"
+                >
+                  Araçta kaza veya hasar olması durumunda ne yapmalıyım?
+                </button>
+              </h2>
+              <div
+                id="panelsStayOpen-collapseThree"
+                class="accordion-collapse collapse"
+              >
+                <div class="accordion-body">
+                  Öncelikle herkesin güvenliğini sağlamak için gerekli önlemleri
+                  almanız ve yetkilileri bilgilendirmeniz önemlidir. Sonrasında
+                  bize hemen ulaşarak durumu bildirmeniz gerekiyor. Kiralama
+                  sırasında yapılan sigorta ve ek güvence seçeneklerine bağlı
+                  olarak hasarın nasıl ele alınacağı değişebilir.
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Footer -->
+
+    <div class="mt-5 footer-part">
+      <div class="container">
+        <footer class="py-5">
+          <div class="row">
+            <div class="col-4 mb-3"></div>
+
+            <div class="col-4 mb-3">
+              <h5>Bilgiler</h5>
+              <ul class="nav flex-column">
+                <li class="nav-item mb-2">
+                  <a href="#" class="nav-link p-0 text-body-secondary"
+                    >Ana Sayfa</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#subeler" class="nav-link p-0 text-body-secondary"
+                    >Şubeler</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#filo" class="nav-link p-0 text-body-secondary"
+                    >Araçlarımız</a
+                  >
+                </li>
+                <li class="nav-item mb-2">
+                  <a href="#SSS" class="nav-link p-0 text-body-secondary"
+                    >SSS</a
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <div class="col-4 mb-3"></div>
+
+            <div class="col-md-5 offset-md-1 mb-3">
+              <form>
+                <h5>Bültenimize Kayıt Olun</h5>
+                <p>Aylık haberler ve kampanyalardan haberdar olun.</p>
+                <div class="d-flex flex-column flex-sm-row w-100 gap-2">
+                  <label for="newsletter1" class="visually-hidden"
+                    >E-Posta Adresiniz</label
+                  >
+                  <input
+                    id="newsletter1"
+                    type="text"
+                    class="form-control"
+                    placeholder="E-Posta Adresiniz"
+                    style="padding-right: 41.6px !important"
+                    data-protonpass-base-css='{"padding-right":""}'
+                  />
+                  <button class="btn btn-primary" type="button">Kaydol</button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+          <div
+            class="d-flex flex-column flex-sm-row justify-content-between py-4 my-4 border-top"
+          >
+            <p>© 2024 aCar, Tüm Hakları saklıdır.</p>
+            <ul class="list-unstyled d-flex justify-content-center">
+              <li class="ms-3">
+                <a href="#" class="link-body-emphasis">
+                  <i
+                    class="fa-brands fa-xl fa-instagram"
+                    style="color: wheat"
+                  ></i>
+                </a>
+              </li>
+              <li class="ms-3">
+                <a href="#" class="link-body-emphasis">
+                  <i
+                    class="fa-brands fa-xl fa-facebook"
+                    style="color: wheat"
+                  ></i>
+                </a>
+              </li>
+              <li class="ms-3">
+                <a href="#" class="link-body-emphasis">
+                  <i
+                    class="fa-brands fa-xl fa-twitter"
+                    style="color: wheat"
+                  ></i>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </footer>
+      </div>
+    </div>
+
+    <script
+      src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+      integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+      crossorigin="anonymous"
+    ></script>
+    <script
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+      crossorigin="anonymous"
+    ></script>
+  </body>
+</html>
