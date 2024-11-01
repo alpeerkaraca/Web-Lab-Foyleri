@@ -28,4 +28,12 @@
         <major> Endüstri Mühendisliği</major>
     </student>
 
+
+    <student>
+        <name>Hüseyin asfn</name>
+        <number>454</number>
+        <year>4</year>
+        <major> Endüstri Mühendisliği</major>
+    </student>
+
 </students>
