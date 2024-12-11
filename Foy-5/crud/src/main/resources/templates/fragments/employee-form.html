@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="tr">
+  <head>
+    <meta charset="UTF-8" />
+    <link th:href="@{/main.css}" rel="stylesheet" />
+    <title>Çalışan Yönetim Sistemi</title>
+  </head>
+  <body class="bg-gray-100 h-screen flex justify-center items-center">
+    <div class="bg-white rounded-lg shadow-lg p-6 w-full max-w-lg">
+      <h2 class="text-2xl font-semibold text-gray-800 mb-4 text-center">
+        Çalışan Bilgilerini Düzenle
+      </h2>
+
+      <form action="/save" method="post" onsubmit="return redirectToHome();">
+        <input type="hidden" name="empID" th:value="${employee.empID}" />
+
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2">Ad Soyad</label>
+          <input
+            type="text"
+            name="empName"
+            th:value="${employee.empName}"
+            required
+            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2">Email</label>
+          <input
+            type="email"
+            name="empEmail"
+            th:value="${employee.empEmail}"
+            required
+            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2">Telefon</label>
+          <input
+            type="tel"
+            name="empPhone"
+            th:value="${employee.empPhone}"
+            required
+            maxlength="14"
+            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+          />
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2">Departman</label>
+          <select
+            name="empDepartment"
+            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          >
+            <option value="" th:selected="${employee.empDepartment == ''}">
+              Departman Seçin
+            </option>
+            <option value="IT" th:selected="${employee.empDepartment == 'IT'}">
+              Bilgi Teknolojileri
+            </option>
+            <option value="HR" th:selected="${employee.empDepartment == 'HR'}">
+              İnsan Kaynakları
+            </option>
+            <option
+              value="Finance"
+              th:selected="${employee.empDepartment == 'Finance'}"
+            >
+              Finans
+            </option>
+            <option
+              value="Marketing"
+              th:selected="${employee.empDepartment == 'Marketing'}"
+            >
+              Pazarlama
+            </option>
+          </select>
+        </div>
+
+        <div class="mb-4">
+          <label class="block text-gray-700 mb-2">Rol</label>
+          <select
+            name="empRole"
+            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            required
+          >
+            <option value="" th:selected="${employee.empRole == ''}">
+              Rol Seçin
+            </option>
+            <option
+              value="Developer"
+              th:selected="${employee.empRole == 'Developer'}"
+            >
+              Geliştirici
+            </option>
+            <option
+              value="Manager"
+              th:selected="${employee.empRole == 'Manager'}"
+            >
+              Yönetici
+            </option>
+            <option
+              value="Analyst"
+              th:selected="${employee.empRole == 'Analyst'}"
+            >
+              Analist
+            </option>
+            <option
+              value="Support"
+              th:selected="${employee.empRole == 'Support'}"
+            >
+              Destek
+            </option>
+          </select>
+        </div>
+
+        <div class="mb-6">
+          <label class="block text-gray-700 mb-2">Profil Resmi</label>
+          <input
+            type="text"
+            name="empPicture"
+            th:value="${employee.empPicture}"
+            class="w-full px-3 py-2 border border-gray-300 rounded-lg focus:outline-none focus:ring-2 focus:ring-blue-500"
+            placeholder="Resim URL'si"
+          />
+        </div>
+
+        <div class="flex justify-end">
+          <button
+            type="submit"
+            class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+          >
+            Güncelle
+          </button>
+          <button
+            type="button"
+            class="ml-2 bg-gray-300 text-gray-700 px-4 py-2 rounded-lg hover:bg-gray-400 transition duration-300"
+            onclick="window.location.href = '/'"
+          >
+            Kapat
+          </button>
+        </div>
+      </form>
+    </div>
+
+    <script>
+      function redirectToHome() {
+        // Form gönderiminden sonra ana sayfaya yönlendir
+        setTimeout(function () {
+          window.location.href = "/";
+        }, 1000); // 1 saniye bekle
+        return true; // Formun gönderilmesine izin ver
+      }
+    </script>
+  </body>
+</html>
